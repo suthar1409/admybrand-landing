@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADmyBRAND AI Suite - Transform Your Marketing with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .testimonial-slide {
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-lg border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg mr-3"></div>
+                            <span class="text-xl font-bold text-gray-900">ADmyBRAND</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+                        <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
+                        <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+                        <button class="btn btn-secondary btn-sm">Sign In</button>
+                        <button class="btn btn-primary btn-sm">Get Started</button>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-white/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Features</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Pricing</a>
+                <a href="#testimonials" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Testimonials</a>
+                <a href="#faq" class="block px-3 py-2 text-gray-600 hover:text-gray-900">FAQ</a>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <button class="btn btn-secondary btn-sm w-full mb-2">Sign In</button>
+                    <button class="btn btn-primary btn-sm w-full">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center fade-in-up">
+                <div class="mb-8">
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-6">
+                        <i data-lucide="sparkles" class="w-4 h-4 mr-2"></i>
+                        New: AI-Powered Creative Optimization is here!
+                    </span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Transform Your Marketing with 
+                    <span class="gradient-text">AI-Powered</span>
+                    Intelligence
+                </h1>
+                
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Generate high-converting content, optimize campaigns in real-time, and scale your marketing efforts with the most advanced AI suite designed for modern marketers.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <button class="btn btn-primary btn-lg w-full sm:w-auto hover-scale">
+                        Start Free Trial <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </button>
+                    <button id="demo-button" class="btn btn-secondary btn-lg w-full sm:w-auto hover-scale">
+                        <i data-lucide="play" class="mr-2 w-5 h-5"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2 counter" data-target="50000">0+</div>
+                        <p class="text-gray-600">Active Users</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2 counter" data-target="2500000">0+</div>
+                        <p class="text-gray-600">Content Pieces Generated</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2 counter" data-target="340">0%</div>
+                        <p class="text-gray-600">ROI Increase</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2 counter" data-target="99">0%</div>
+                        <p class="text-gray-600">Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Powerful Features for Modern Marketing
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Everything you need to create, optimize, and scale your marketing campaigns with the power of artificial intelligence.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI-Powered Content Generation</h3>
+                    <p class="text-gray-600 leading-relaxed">Generate high-converting ad copy, social media posts, and email campaigns in seconds with our advanced AI engine.</p>
+                </div>
+                
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="target" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Smart Audience Targeting</h3>
+                    <p class="text-gray-600 leading-relaxed">Identify and reach your ideal customers with precision using our AI-driven audience analysis and segmentation.</p>
+                </div>
+                
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-Time Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">Track campaign performance, ROI, and customer engagement with beautiful, actionable dashboards and reports.</p>
+                </div>
+                
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="shield" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Brand Safety Monitoring</h3>
+                    <p class="text-gray-600 leading-relaxed">Protect your brand reputation with AI-powered content monitoring and automated compliance checking.</p>
+                </div>
+                
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Creative Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed">Automatically test and optimize your creative assets to maximize engagement and conversion rates.</p>
+                </div>
+                
+                <div class="card p-8 text-center group hover-lift">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">Streamline workflows with advanced collaboration tools, approval processes, and project management features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the perfect plan for your business. All plans include a 14-day free trial with no credit card required.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="card p-8 relative">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small businesses and freelancers</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$29</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Up to 10,000 AI-generated content pieces</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Basic analytics dashboard</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Email support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">5 team members</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Standard templates</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="btn btn-secondary w-full btn-lg">Get Started</button>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="card p-8 relative ring-2 ring-blue-500 scale-105">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                            Most Popular
+                        </span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+                        <p class="text-gray-600 mb-4">Ideal for growing marketing teams</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Unlimited AI-generated content</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Advanced analytics & reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Priority support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Unlimited team members</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Custom templates & branding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">API access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">A/B testing tools</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="btn btn-primary w-full btn-lg">Start Free Trial</button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="card p-8 relative">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large organizations with complex needs</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$299</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Everything in Professional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Custom AI model training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">White-label solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Advanced security & compliance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">Custom integrations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-600">24/7 phone support</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="btn btn-secondary w-full btn-lg">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Loved by Marketing Teams Worldwide
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join thousands of marketers who have transformed their campaigns with ADmyBRAND AI Suite.
+                </p>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div class="overflow-hidden">
+                    <div id="testimonials-container" class="flex testimonial-slide">
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 leading-relaxed">"ADmyBRAND AI Suite has revolutionized our marketing workflow. We've seen a 300% increase in content output and 40% better engagement rates."</p>
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b1b6?w=150&h=150&fit=crop&crop=face" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                        <p class="text-sm text-gray-500">Marketing Director at TechFlow Inc</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 leading-relaxed">"The AI-powered targeting features helped us reduce customer acquisition costs by 60% while doubling our conversion rates. Incredible ROI!"</p>
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                                        <p class="text-sm text-gray-500">Founder & CEO at StartupLab</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="card p-6 h-full">
+                                <div class="flex items-center mb-4">
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 leading-relaxed">"Our creative team loves the AI optimization tools. We can now test hundreds of variations and find winning creatives in hours, not weeks."</p>
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Emily Rodriguez" class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                                        <p class="text-sm text-gray-500">Creative Director at BrandCraft Agency</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="testimonial-dot w-3 h-3 rounded-full transition-colors duration-300 bg-blue-600" data-slide="0"></button>
+                    <button class="testimon
